@@ -678,6 +678,10 @@ nav {
   gap: 2rem;
 }
 
+.g-recaptcha {
+  margin-bottom: 1.5rem;
+}
+
 .contact-info h3 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
