@@ -1,26 +1,676 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="#" class="logo-text">Muhammad<span>Padanta</span></a>
+        </div>
+        <div class="menu-btn">
+          <div class="menu-btn__lines"></div>
+        </div>
+        <ul class="nav-items">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-<head>
+    <!-- Hero Section -->
+    <section id="home" class="hero animate-on-scroll">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="title">Backend Developer</h1>
+          <h2 class="subtitle">Building robust and scalable systems</h2>
+          <p class="description">
+            Specialized in designing and implementing high-performance backend
+            solutions with a focus on security, scalability, and
+            maintainability.
+          </p>
+          <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="code-container">
+            <pre><code>
+function startServer() {
+  const app = express();
+  const PORT = process.env.PORT || 3000;
 
-  <title>Passanger Counter</title>
-  <link rel="stylesheet" href="https://muhammadpadanta.github.io/index.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  // Middleware
+  app.use(express.json());
+  app.use(cors());
+  app.use(helmet());
 
-<body>
+  // API Routes
+  app.use('/api/v1', routes);
 
-<h1>People entered</h1>
-<h2 id="count-el">0</h2>
-<button id="increment-btn" onclick="increment()" value="Increase">
-  INCREMENT
-</button>
-<script src="index.js"></script>
+  // Error handling
+  app.use(errorHandler);
 
-</body>
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 
+startServer();
+                    </code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="about animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <div class="img-container">
+              <img src="pp.jpeg" alt="Your Name" class="profile-photo" />
+            </div>
+          </div>
+          <div class="about-text">
+            <h3>
+              Aspiring Backend Developer with hands-on experience in building
+              scalable systems and APIs. Passionate about creating efficient and
+              secure backend solutions.
+            </h3>
+            <p>
+              I specialize in designing and building robust server-side
+              applications, APIs, and database systems that power modern web and
+              mobile applications. With expertise in multiple programming
+              languages and frameworks, I create efficient, scalable, and secure
+              backend solutions that handle complex business logic.
+            </p>
+            <p>
+              My approach focuses on writing clean, maintainable code with
+              comprehensive testing and documentation. I'm passionate about
+              performance optimization, system architecture, and implementing
+              best practices for security and data protection.
+            </p>
+            <div class="about-details">
+              <div class="detail-item">
+                <i class="fas fa-envelope"></i>
+                <span>padanta@proton.me</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Batam, Indonesia</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Diploma in Informatics Engineering</span>
+              </div>
+            </div>
+            <div class="about-links">
+              <a
+                href="https://github.com/muhammadpadanta"
+                target="_blank"
+                class="social-link"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/muhammadpadanta/"
+                target="_blank"
+                class="social-link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="btn btn-outline"
+                >Download Resume <i class="fas fa-download"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3 class="category-title">Programming Languages</h3>
+            <div class="skill-items">
+              <div class="skill-item" data-skill="JavaScript">
+                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                <div class="skill-info">
+                  <h4>JavaScript</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Python">
+                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                <div class="skill-info">
+                  <h4>Python</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Java">
+                <div class="skill-icon"><i class="fab fa-java"></i></div>
+                <div class="skill-info">
+                  <h4>Java</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Go">
+                <div class="skill-icon"><i class="fab fa-golang"></i></div>
+                <div class="skill-info">
+                  <h4>Golang</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Frameworks & Technologies</h3>
+            <div class="skill-items">
+              <div class="skill-item" data-skill="Node.js">
+                <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                <div class="skill-info">
+                  <h4>Node.js</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Express">
+                <div class="skill-icon"><i class="fas fa-server"></i></div>
+                <div class="skill-info">
+                  <h4>Express</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 88%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Django">
+                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                <div class="skill-info">
+                  <h4>Django</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 82%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Spring">
+                <div class="skill-icon"><i class="fas fa-leaf"></i></div>
+                <div class="skill-info">
+                  <h4>Spring</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 78%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Databases & Storage</h3>
+            <div class="skill-items">
+              <div class="skill-item" data-skill="MongoDB">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-info">
+                  <h4>MongoDB</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="PostgreSQL">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-info">
+                  <h4>PostgreSQL</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Redis">
+                <div class="skill-icon"><i class="fas fa-memory"></i></div>
+                <div class="skill-info">
+                  <h4>Redis</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="ElasticSearch">
+                <div class="skill-icon"><i class="fas fa-search"></i></div>
+                <div class="skill-info">
+                  <h4>ElasticSearch</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">DevOps & Cloud</h3>
+            <div class="skill-items">
+              <div class="skill-item" data-skill="Docker">
+                <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                <div class="skill-info">
+                  <h4>Docker</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 92%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="Kubernetes">
+                <div class="skill-icon">
+                  <i class="fas fa-dharmachakra"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Kubernetes</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="AWS">
+                <div class="skill-icon"><i class="fab fa-aws"></i></div>
+                <div class="skill-info">
+                  <h4>AWS</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item" data-skill="CI/CD">
+                <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+                <div class="skill-info">
+                  <h4>CI/CD</h4>
+                  <div class="skill-bar">
+                    <div class="skill-level" style="width: 88%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="api">API</button>
+          <button class="filter-btn" data-filter="database">Database</button>
+          <button class="filter-btn" data-filter="microservice">
+            Microservices
+          </button>
+          <button class="filter-btn" data-filter="cloud">Cloud</button>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card" data-category="api microservice">
+            <div class="project-img">
+              <div class="img-placeholder">
+                <i class="fas fa-code"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">MongoDB</span>
+              </div>
+              <h3 class="project-title">E-Commerce API Platform</h3>
+              <p class="project-description">
+                A high-performance RESTful API powering a large e-commerce
+                platform with 10,000+ daily users.
+              </p>
+              <div class="project-features">
+                <ul>
+                  <li>JWT-based authentication & role-based access control</li>
+                  <li>Payment processing integration with Stripe</li>
+                  <li>Real-time inventory management</li>
+                  <li>Advanced search with ElasticSearch</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm">View Demo</a>
+                <a href="#" class="btn btn-sm btn-outline"
+                  >GitHub <i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="database cloud">
+            <div class="project-img">
+              <div class="img-placeholder">
+                <i class="fas fa-database"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">AWS</span>
+              </div>
+              <h3 class="project-title">Distributed Database System</h3>
+              <p class="project-description">
+                A highly available distributed database system with automatic
+                sharding and failover capabilities.
+              </p>
+              <div class="project-features">
+                <ul>
+                  <li>Horizontal scaling across multiple nodes</li>
+                  <li>99.99% uptime with automatic failover</li>
+                  <li>Real-time data replication</li>
+                  <li>Custom query optimizer for complex operations</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm">View Demo</a>
+                <a href="#" class="btn btn-sm btn-outline"
+                  >GitHub <i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="microservice cloud">
+            <div class="project-img">
+              <div class="img-placeholder">
+                <i class="fas fa-cubes"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Go</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">gRPC</span>
+              </div>
+              <h3 class="project-title">Microservices Architecture</h3>
+              <p class="project-description">
+                A scalable microservices-based backend for a financial
+                technology application handling 1M+ transactions daily.
+              </p>
+              <div class="project-features">
+                <ul>
+                  <li>Service mesh with Istio for traffic management</li>
+                  <li>Circuit breaking and rate limiting</li>
+                  <li>Event-driven architecture with Kafka</li>
+                  <li>Automated CI/CD pipeline with GitLab</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm">View Demo</a>
+                <a href="#" class="btn btn-sm btn-outline"
+                  >GitHub <i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="api database">
+            <div class="project-img">
+              <div class="img-placeholder">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Redis</span>
+              </div>
+              <h3 class="project-title">Real-time Chat Backend</h3>
+              <p class="project-description">
+                A high-throughput backend system for a messaging application
+                supporting 100K+ concurrent users.
+              </p>
+              <div class="project-features">
+                <ul>
+                  <li>WebSocket implementation for real-time communication</li>
+                  <li>Message persistence with MongoDB</li>
+                  <li>Redis for caching and pub/sub functionality</li>
+                  <li>End-to-end encryption for all messages</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm">View Demo</a>
+                <a href="#" class="btn btn-sm btn-outline"
+                  >GitHub <i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2022 - Present</div>
+            <div class="timeline-content">
+              <h3>Senior Backend Developer</h3>
+              <h4>Tech Innovators Inc.</h4>
+              <p>
+                Lead the development of scalable backend services for enterprise
+                clients. Designed and implemented microservices architecture,
+                automated CI/CD pipelines, and optimized database performance.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">AWS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2020 - 2022</div>
+            <div class="timeline-content">
+              <h3>Backend Developer</h3>
+              <h4>Digital Solutions Ltd.</h4>
+              <p>
+                Developed and maintained RESTful APIs and server-side
+                applications. Implemented advanced caching strategies and
+                security measures that improved system performance by 40%.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Django</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2018 - 2020</div>
+            <div class="timeline-content">
+              <h3>Software Engineer</h3>
+              <h4>Innovative Software Co.</h4>
+              <p>
+                Developed backend services for web and mobile applications.
+                Collaborated with front-end developers to integrate API
+                endpoints and optimize data transfer between client and server.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Let's discuss your project</h3>
+            <p>
+              I'm currently available for freelance work and full-time
+              positions. If you have a project that requires robust backend
+              solutions or if you're looking to hire a skilled backend
+              developer, feel free to reach out.
+            </p>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="details">
+                  <h4>Email</h4>
+                  <p>padanta@proton.me</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="details">
+                  <h4>Phone</h4>
+                  <p>+62 821-7577-4102</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="details">
+                  <h4>Location</h4>
+                  <p>Batam, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/mrbpzbdq"
+              method="POST"
+            >
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <!-- reCAPTCHA v2 Widget -->
+              <div
+                class="g-recaptcha"
+                data-sitekey="6Le2FOsqAAAAAChb8HI1PIOC1ZTJVC6op9N4gCCf"
+              ></div>
+              <button type="submit" class="btn btn-primary btn-full">
+                Send Message
+              </button>
+            </form>
+            <script
+              src="https://www.google.com/recaptcha/api.js"
+              async
+              defer
+            ></script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="#" class="logo-text">Muhammad<span>Padanta</span></a>
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <a href="https://github.com/muhammadpadanta" class="social-link"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/muhammadpadanta/"
+              class="social-link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 muhammadpadanta. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
 </html>
